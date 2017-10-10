@@ -23,7 +23,7 @@ Flex 是 Flexible Box 的缩写，意为“弹性布局/弹性的盒子布局”
 
 采用 Flex 布局的元素，称为 Flex 容器（flex container），简称“容器”。它的所有子元素自动成为容器成员，称为 Flex 项目（flex item），简称“项目”。
 
-![ww](../../_resource/images/flex-direction-terms.svg)
+![ww](../../_resource/images/flex-direction-terms.png)
 伸缩容器默认存在两根轴：
 * 主轴（main axis）
 * 交叉轴（cross axis）
