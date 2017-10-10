@@ -90,4 +90,4 @@ HTML 代码
     flex-direction: row;
 }
 ```
-[示例](../../Code/Css/Flexbox/flex_direction_row.html)
+[示例](../../Code/CSS/Flexbox/flex_direction-row.html)
