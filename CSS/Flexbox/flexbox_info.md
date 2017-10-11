@@ -90,4 +90,152 @@ HTML 代码
     flex-direction: row;
 }
 ```
-[示例](../../Code/CSS/Flexbox/flex_direction-row.html)
+
+[示例](../../Code/CSS/Flexbox/flex-direction_row.html)
+![flex-direction: row](../../_resource/images/flex-direction_row.png)
+
+#### row-reverse
+>伸缩容器若为水平方向轴，伸缩项目的排版方式为从右向左排列。
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+```
+
+[示例](../../Code/CSS/Flexbox/flex-direction_row-reverse.html)
+![flex-direction: row-reverse](../../_resource/images/flex-direction_row-reverse.png)
+
+#### column
+>伸缩容器若为垂直方向轴，伸缩项目的排版方式为从上向下排列。
+
+```css
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+```
+
+[示例](../../Code/CSS/Flexbox/flex-direction_column.html)
+![flex-direction: column](../../_resource/images/flex-direction_column.png)
+
+#### column-reverse
+>伸缩容器若为垂直方向轴，伸缩项目的排版方式为从下向上排列。
+
+```css
+.flex-container {
+    display: flex;
+    flex-direction: column-reverse;
+}
+```
+[示例](../../Code/CSS/Flexbox/flex-direction_column-reverse.html)
+![flex-direction: column-reverse](../../_resource/images/flex-direction_column-reverse.png)
+
+### 2.1.3 flex-wrap
+该属性主要用来指定伸缩容器的主轴线方向空间不足的情况，是否换行以及该如何换行。
+```
+flex-wrap: nowrap | wrap | wrap-reverse
+```
+HTML 代码
+```html
+<span class="flex-container">
+    <span class="flex-item">1</span>
+    <span class="flex-item">2</span>
+    <span class="flex-item">3</span>
+    <span class="flex-item">4</span>
+    <span class="flex-item">5</span>
+</span>
+```
+
+#### nowrap（默认值）
+>即使空间不足，伸缩容器也不允许换行
+
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 360px;
+    height: 260px;
+}
+.flex-item {
+    width: 68px;
+    height: 68px;
+}
+```
+[示例](../../Code/CSS/Flexbox/flex-wrap_nowrap.html)
+![flex-wrap: nowrap](../../_resource/images/flex-wrap_nowrap.png)
+
+#### wrap
+>伸缩容器在空间不足的情况下允许换行。若主轴为水平轴，则换行的方向为从上到下。
+
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 360px;
+    height: 260px;
+}
+.flex-item {
+    width: 68px;
+    height: 68px;
+}
+```
+[示例](../../Code/CSS/Flexbox/flex-wrap_wrap.html)
+![flex-wrap: nowrap](../../_resource/images/flex-wrap_wrap.png)
+
+#### wrap-reverse
+>伸缩容器在空间不足的情况下允许换行，若主轴为水平轴，则换行的方向为从下到上（和 wrap 相反）。
+
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    width: 360px;
+    height: 260px;
+}
+.flex-item {
+    width: 68px;
+    height: 68px;
+}
+```
+
+[示例](../../Code/CSS/Flexbox/flex-wrap_wrap-reverse.html)
+![flex-wrap: nowrap](../../_resource/images/flex-wrap_wrap-reverse.png)
+
+### flex-flow
+该属性是 `flex-direction` 和 `flex-wrap` 属性的缩写版本，它同时定义了伸缩容器的主轴和侧轴，其默认值为 `row nowrap`。
+
+语法：
+```
+flex-flow: flex-direction flex-wrap
+```
+
+HTML 代码
+```html
+<span class="flex-container">
+    <span class="flex-item">1</span>
+    <span class="flex-item">2</span>
+    <span class="flex-item">3</span>
+    <span class="flex-item">4</span>
+    <span class="flex-item">5</span>
+</span>
+```
+
+```css
+.flex-container {
+    display: flex;
+    flex-flow: row wrap-reverse;
+    width: 360px;
+    height: 260px;
+}
+.flex-item {
+    width: 68px;
+    height: 68px;
+}
+```
+
+[示例](../../Code/CSS/Flexbox/flex-flow.html)
+![flex-wrap: nowrap](../../_resource/images/flex-flow.png)
