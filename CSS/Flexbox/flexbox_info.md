@@ -205,7 +205,7 @@ HTML 代码
 [示例](../../Code/CSS/Flexbox/flex-wrap_wrap-reverse.html)
 ![flex-wrap: nowrap](../../_resource/images/flex-wrap_wrap-reverse.png)
 
-### flex-flow
+### 2.1.4 flex-flow
 该属性是 `flex-direction` 和 `flex-wrap` 属性的缩写版本，它同时定义了伸缩容器的主轴和侧轴，其默认值为 `row nowrap`。
 
 语法：
@@ -239,3 +239,134 @@ HTML 代码
 
 [示例](../../Code/CSS/Flexbox/flex-flow.html)
 ![flex-wrap: nowrap](../../_resource/images/flex-flow.png)
+
+### 2.1.5 justify-content
+该属性用来定义伸缩项目沿主轴线的对齐方式。
+```
+justify-content: flex-start | flex-end | center | space-between | space-around
+```
+HTML 代码
+```html
+<span class="flex-container">
+    <span class="flex-item">1</span>
+    <span class="flex-item">2</span>
+    <span class="flex-item">3</span>
+</span>
+```
+
+#### flex-start(default)
+>伸缩项目向主轴线的起始位置靠齐。
+
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 360px;
+    height: 260px;
+}
+.flex-item {
+    width: 68px;
+    height: 68px;
+}
+```
+
+[示例](../../Code/CSS/Flexbox/justify-content_flex-start.html)
+![justify-content: flex_start](../../_resource/images/justify-content_flex-start.png)
+
+#### flex-end
+>伸缩项目向主轴线的结束位置靠齐。
+
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 360px;
+    height: 260px;
+}
+.flex-item {
+    width: 68px;
+    height: 68px;
+}
+```
+
+[示例](../../Code/CSS/Flexbox/justify-content_flex-end.html)
+![justify-content: flex_end](../../_resource/images/justify-content_flex-end.png)
+
+#### center
+>伸缩项目向主轴线的中间位置靠齐。
+
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 360px;
+    height: 260px;
+}
+.flex-item {
+    width: 68px;
+    height: 68px;
+}
+```
+
+[示例](../../Code/CSS/Flexbox/justify-content_center.html)
+![justify-content: center](../../_resource/images/justify-content_center.png)
+
+#### space-between
+>伸缩项目会平均地分布在主轴线里。第一个伸缩项目在主轴线的开始位置，最后一个伸缩项目在主轴线的终点位置。
+
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 360px;
+    height: 260px;
+}
+.flex-item {
+    width: 68px;
+    height: 68px;
+}
+```
+
+[示例](../../Code/CSS/Flexbox/justify-content_space-between.html)
+![justify-content: space-between](../../_resource/images/justify-content_space-between.png)
+
+#### apsce-around
+>伸缩项目会平均地分布在主轴线里，两端保留一半的空间
+
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 360px;
+    height: 260px;
+}
+.flex-item {
+    width: 68px;
+    height: 68px;
+}
+```
+
+[示例](../../Code/CSS/Flexbox/justify-content_space-around.html)
+![justify-content: space-between](../../_resource/images/justify-content_space-around.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1
