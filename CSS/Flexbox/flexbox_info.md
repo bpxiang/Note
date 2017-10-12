@@ -354,6 +354,117 @@ HTML 代码
 [示例](../../Code/CSS/Flexbox/justify-content_space-around.html)
 ![justify-content: space-between](../../_resource/images/justify-content_space-around.png)
 
+### 2.1.6 align-items
+定义伸缩项目在伸缩容器的交叉轴上的对齐方式。
+```
+align-items: flex-start | flex-end | center | baseline | stretch
+```
+HTML 代码
+```html
+<span class="flex-container">
+    <span class="flex-item" id="item1">1</span>
+    <span class="flex-item" id="item2">2</span>
+    <span class="flex-item" id="item3">3</span>
+</span>
+```
+
+#### flex-start (default)
+>伸缩项目向交叉轴的起始位置靠齐。
+
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 360px;
+    height: 260px;
+}
+.flex-item {
+    width: 68px;
+    height: 68px;
+}
+```
+
+[示例](../../Code/CSS/Flexbox/align-items_flex-start.html)
+![align-items: flex-start](../../_resource/images/align-items_flex-start.png)
+
+#### flex-end
+>伸缩项目向交叉轴的结束位置靠齐
+
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 360px;
+    height: 260px;
+}
+.flex-item {
+    width: 68px;
+    height: 68px;
+}
+```
+
+[示例](../../Code/CSS/Flexbox/align-items_flex-end.html)
+![align-items: flex-end](../../_resource/images/align-items_flex-end.png)
+
+#### center
+>伸缩项目向交叉轴的中间位置靠齐
+
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 360px;
+    height: 260px;
+}
+.flex-item {
+    width: 68px;
+    height: 68px;
+}
+```
+
+[示例](../../Code/CSS/Flexbox/align-items_center.html)
+![align-items: center](../../_resource/images/align-items_center.png)
+
+#### baseline
+>伸缩项目根据它们的基线对齐
+
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    width: 360px;
+    height: 260px;
+}
+.flex-item {
+    width: 68px;
+    height: 68px;
+}
+```
+
+#### stretch
+>伸缩项目在交叉轴方向拉伸填充整个伸缩容器
+
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 360px;
+    height: 260px;
+}
+.flex-item {
+    width: 68px;
+    height: 68px;
+}
+```
+
+[示例](../../Code/CSS/Flexbox/align-items_stretch.html)
+![align-items: stretch](../../_resource/images/align-items_stretch.png)
+
 
 
 
