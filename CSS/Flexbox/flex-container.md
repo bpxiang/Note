@@ -58,6 +58,7 @@ HTML 代码
 ```
 
 [示例](../../Code/CSS/Flexbox/flex-direction_row.html)
+
 ![flex-direction: row](../../_resource/images/flex-direction_row.png)
 
 ### 2.2 row-reverse
@@ -70,6 +71,7 @@ HTML 代码
 ```
 
 [示例](../../Code/CSS/Flexbox/flex-direction_row-reverse.html)
+
 ![flex-direction: row-reverse](../../_resource/images/flex-direction_row-reverse.png)
 
 ### 2.3 column
@@ -83,6 +85,7 @@ HTML 代码
 ```
 
 [示例](../../Code/CSS/Flexbox/flex-direction_column.html)
+
 ![flex-direction: column](../../_resource/images/flex-direction_column.png)
 
 ### 2.4 column-reverse
@@ -95,6 +98,7 @@ HTML 代码
 }
 ```
 [示例](../../Code/CSS/Flexbox/flex-direction_column-reverse.html)
+
 ![flex-direction: column-reverse](../../_resource/images/flex-direction_column-reverse.png)
 
 ## 3. flex-wrap
@@ -130,6 +134,7 @@ HTML 代码
 }
 ```
 [示例](../../Code/CSS/Flexbox/flex-wrap_nowrap.html)
+
 ![flex-wrap: nowrap](../../_resource/images/flex-wrap_nowrap.png)
 
 ### 3.2 wrap
@@ -149,6 +154,7 @@ HTML 代码
 }
 ```
 [示例](../../Code/CSS/Flexbox/flex-wrap_wrap.html)
+
 ![flex-wrap: nowrap](../../_resource/images/flex-wrap_wrap.png)
 
 ### 3.3 wrap-reverse
@@ -169,6 +175,7 @@ HTML 代码
 ```
 
 [示例](../../Code/CSS/Flexbox/flex-wrap_wrap-reverse.html)
+
 ![flex-wrap: nowrap](../../_resource/images/flex-wrap_wrap-reverse.png)
 
 ## 4. flex-flow
@@ -204,6 +211,7 @@ HTML 代码
 ```
 
 [示例](../../Code/CSS/Flexbox/flex-flow.html)
+
 ![flex-wrap: nowrap](../../_resource/images/flex-flow.png)
 
 ## 5. justify-content
@@ -238,6 +246,7 @@ HTML 代码
 ```
 
 [示例](../../Code/CSS/Flexbox/justify-content_flex-start.html)
+
 ![justify-content: flex_start](../../_resource/images/justify-content_flex-start.png)
 
 ### 5.2 flex-end
@@ -258,6 +267,7 @@ HTML 代码
 ```
 
 [示例](../../Code/CSS/Flexbox/justify-content_flex-end.html)
+
 ![justify-content: flex_end](../../_resource/images/justify-content_flex-end.png)
 
 ### 5.3 center
@@ -278,6 +288,7 @@ HTML 代码
 ```
 
 [示例](../../Code/CSS/Flexbox/justify-content_center.html)
+
 ![justify-content: center](../../_resource/images/justify-content_center.png)
 
 ### 5.4 space-between
@@ -298,6 +309,7 @@ HTML 代码
 ```
 
 [示例](../../Code/CSS/Flexbox/justify-content_space-between.html)
+
 ![justify-content: space-between](../../_resource/images/justify-content_space-between.png)
 
 ### 5.5 space-around
@@ -318,6 +330,7 @@ HTML 代码
 ```
 
 [示例](../../Code/CSS/Flexbox/justify-content_space-around.html)
+
 ![justify-content: space-between](../../_resource/images/justify-content_space-around.png)
 
 ## 6. align-items
@@ -352,6 +365,7 @@ HTML 代码
 ```
 
 [示例](../../Code/CSS/Flexbox/align-items_flex-start.html)
+
 ![align-items: flex-start](../../_resource/images/align-items_flex-start.png)
 
 ### 6.2 flex-end
@@ -372,6 +386,7 @@ HTML 代码
 ```
 
 [示例](../../Code/CSS/Flexbox/align-items_flex-end.html)
+
 ![align-items: flex-end](../../_resource/images/align-items_flex-end.png)
 
 ### 6.3 center
@@ -392,6 +407,7 @@ HTML 代码
 ```
 
 [示例](../../Code/CSS/Flexbox/align-items_center.html)
+
 ![align-items: center](../../_resource/images/align-items_center.png)
 
 ### 6.4 baseline
@@ -411,6 +427,9 @@ HTML 代码
 }
 ```
 
+[示例](../../Code/CSS/Flexbox/align-items_baseline.html)
+
+![align-items: stretch](../../_resource/images/align-items_baseline.png)
 ### 6.5 stretch
 >伸缩项目在交叉轴方向拉伸填充整个伸缩容器
 
@@ -429,4 +448,72 @@ HTML 代码
 ```
 
 [示例](../../Code/CSS/Flexbox/align-items_stretch.html)
+
 ![align-items: stretch](../../_resource/images/align-items_stretch.png)
+
+## 7. align-content
+>这个属性主要用来调整伸缩项目出现换行后在交叉轴上的对齐方式。类似于伸缩项目在主轴上使用 `justify-content`。
+
+```
+align-content: flex-start | flex-end | center | space-between | space-around | stretch
+```
+
+HTML 代码
+```html
+<span class="flex-container">
+    <span class="flex-item">1</span>
+    <span class="flex-item">2</span>
+    <span class="flex-item">3</span>
+    <span class="flex-item">4</span>
+    <span class="flex-item">5</span>
+    <span class="flex-item">6</span>
+    <span class="flex-item">7</span>
+    <span class="flex-item">8</span>
+</span>
+```
+
+flex-wrap: wrap 这个一定到开启，且它在出现换行的情况下才能看到效果。
+
+### 7.1 flex-start (default)
+>伸缩项目向交叉轴的起始位置靠齐。
+
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 360px;
+    height: 260px;
+}
+.flex-item {
+    width: 68px;
+    height: 68px;
+}
+```
+
+[示例](../../Code/CSS/Flexbox/align-content_flex-start.html)
+
+![align-content: flex-start](../../_resource/images/align-content_flex-start.png)
+
+### 7.2 flex-end
+>伸缩项目向交叉轴的结束位置靠齐。
+
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    width: 360px;
+    height: 260px;
+}
+.flex-item {
+    width: 68px;
+    height: 68px;
+}
+```
+
+[示例](../../Code/CSS/Flexbox/align-content_flex-end.html)
+
+![align-content: flex-end](../../_resource/images/align-content_flex-end.png)
