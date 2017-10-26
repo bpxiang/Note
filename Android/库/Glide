@@ -1,0 +1,11 @@
+# Glide
+
+Glide 是一个超级强大的图片加载库，不仅可以用来加载本地图片，还可以加载网络图片、GIF 图片、甚至本地视频。
+
+Glide 的项目主页地址 [Glide 主页](https://github.com/bumptech/glide)
+
+如果图片的像素非常高，如果不压缩就直接展示的话，很容易引起内存溢出。使用 Glide 就完全不需要担心这回事，因为 Glide 在内部做了许多非常复杂的逻辑操作，其中就包括图片压缩。
+
+```java
+Glide.with(context).load(fruit.getImageId()).into(holder.fruitImage);
+```
