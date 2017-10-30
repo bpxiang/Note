@@ -68,4 +68,4 @@ fab.setOnClickListener(new View.OnClickListener() {
 });
 ```
 
-Snackbar 的 make() 方法中传入的第一个参数就是用来指定 Snackbar 基于哪个 View 来触发的，刚才我们传入的是 FloatingActionButton 本身，而 FloatingActionButton 时 CoordinatorLayout 中的子控件，因此这个事件就理所应当能被监听到了。
+Snackbar 的 make() 方法中传入的第一个参数就是用来指定 Snackbar 基于哪个 View 来触发的，刚才我们传入的是 FloatingActionButton 本身，而 FloatingActionButton 时 CoordinatorLayout 中的子控件，因此这个事件就理所应当能被监听到了。
