@@ -96,6 +96,6 @@ public class MainActivity extends AppCompatActivity {
 
 `SwipeRefreshLayout.setColorSchemeResources()` 方法设置下拉刷新进度条的颜色。
 
-`SwipeRefreshLayout.setOnRefreshListener()` 方法来设置一个下拉菜单的监听器，当触发了下拉刷新操作的时候就会会掉这个监听器的 onRefresh() 方法，然后我们在这里处理具体的刷新逻辑就可以了。
+`SwipeRefreshLayout.setOnRefreshListener()` 方法来设置一个下拉菜单的监听器，当触发了下拉刷新操作的时候就会会掉这个监听器的 onRefresh() 方法，然后我们在这里处理具体的刷新逻辑就可以了。
 
 `SwipeRefreshLayout.setRefreshing()` 方法并传入 false，用于表示刷新事件结束，并隐藏了刷新进度条。

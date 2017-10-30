@@ -51,7 +51,7 @@ FloatingActionButton 和普通的 Button 没什么两样。
 </android.support.v4.widget.DrawerLayout>
 ```
 
-app:elevation 属性给 FloatingActionButton 指定一个高度值，高度值越大，投影范围也越大，但是投影效果越淡，高度值越小，投影范围也越小，但是投影效果越nong。FloatingAction 效果就已经足够了。
+app:elevation 属性给 FloatingActionButton 指定一个高度值，高度值越大，投影范围也越大，但是投影效果越淡，高度值越小，投影范围也越小，但是投影效果越浓。FloatingAction 效果就已经足够了。
 
 ```java
 

@@ -1,10 +1,10 @@
 # ToolBar
 
-ActionBar 由于设计原因，被限定只能位于活动的顶部，从而不能实现一些 Material Design 的效果，因此官方现在已经不再建议使用 ActionBar 了。
+ActionBar 由于设计原因，被限定只能位于活动的顶部，从而不能实现一些 Material Design 的效果，因此官方现在已经不再建议使用 ActionBar 了。
 
 Toolbar 的强大之处在于，不仅继承了 ActionBar 的所有功能，而且灵活性很高，可以配合其他控件来完成一些 Material Design 的效果。
 
-ToolBar 控件是由 appcompat-v7 库提供的。
+ToolBar 控件是由 appcompat-v7 库提供的。
 
 ## 1. 隐藏 ActionBar
 ### 1. 打开 AndroidManifest.xml
@@ -26,7 +26,7 @@ Toolbar 的强大之处在于，不仅继承了 ActionBar 的所有功能，而�
 
 ### 2. 打开 `res/values/styles.xml` 文件
 
-使用 Toolbar 替代 ActionBar，因此需要指定一个不带 ActionBar 的主题，通常有 `Theme.AppCompat.NoActionBar` 和 `Theme.AppCompat.Light.NoActionBar` 这两种主题可选。其中 `Theme.AppCompat.NoActionBar` 表示深色主题，它会将界面的主题颜色设成深色，陪衬颜色射成淡色。而 `Theme.AppCompat.Light.NoActionBar` 表示淡色主题，他会将页面的主题颜色设成淡色，陪衬颜色设成深色。
+使用 Toolbar 替代 ActionBar，因此需要指定一个不带 ActionBar 的主题，通常有 `Theme.AppCompat.NoActionBar` 和 `Theme.AppCompat.Light.NoActionBar` 这两种主题可选。其中 `Theme.AppCompat.NoActionBar` 表示深色主题，它会将界面的主题颜色设成深色，陪衬颜色射成淡色。而 `Theme.AppCompat.Light.NoActionBar` 表示淡色主题，他会将页面的主题颜色设成淡色，陪衬颜色设成深色。
 
 
 ```xml
@@ -92,7 +92,7 @@ protected void onCreate(Bundle savedInstanceState) {
 </manifest>
 ```
 
-`android:label` 指定在 ToolBar 中显示的文字的内容，如果没有指定的话，会默认使用 application 中指定的 label 内容，也就是我们的应用名称。 
+`android:label` 指定在 ToolBar 中显示的文字的内容，如果没有指定的话，会默认使用 application 中指定的 label 内容，也就是我们的应用名称。 
 
 ## 3. 添加按钮
 
@@ -117,7 +117,7 @@ protected void onCreate(Bundle savedInstanceState) {
 ```
 
 `<item>` 定义 action 按钮。  
-`adnroid:id` 指定按钮的 id  
+`adnroid:id` 指定按钮的 id  
 `android:icon` 用于指定按钮的图标  
 `android:title` 用于指定按钮的文字。  
 `app:showAsAction` 指定按钮的现实位置，使用 app 命名空间，可以兼容低版本的系统。

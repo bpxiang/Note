@@ -2,7 +2,7 @@
 
 NavigationView 是 Design Support 库中提供的一个控件，它不仅仅是严格按照 Material Design 的要求来进行设计的。而且还可以将滑动菜单页面的实现变得非常简单。
 
-## 1. 添加依赖
+## 1. 添加依赖
 `app/build.gradle` 添加依赖关系
 ```
 dependencies {
@@ -12,7 +12,7 @@ dependencies {
 }
 ```
 
-`build.gradle`  添加 maven (不加出现 “failed to resolve design”)
+`build.gradle`  添加 maven (不加出现 “failed to resolve design”)
 ```
 allprojects {
     repositories {
@@ -83,11 +83,11 @@ allprojects {
 </menu>
 ```
 
-group 表示一个组，checkableBehavior 属性指定为 single 表示组中的所有菜单项只能单选。
+group 表示一个组，`checkableBehavior` 属性指定为 `single` 表示组中的所有菜单项只能单选。
 
 ### 2.3 headerLayout
 
-右击 layout 文件夹->New->Layout resource file，创建一个 nav_header.xml 文件。
+右击 layout 文件夹->New->Layout resource file，创建一个 nav_header.xml 文件。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

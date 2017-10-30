@@ -2,7 +2,7 @@
 
 DrawerLayout 由 support-v4 库提供的。DrawerLayout 中放置了两个直接子控件，第一个子控件是 FrameLayout，用于作为主屏幕中显示的内容，第二个子控件作为滑动菜单中显示的内容，DrawerLayout 并没有限制只能使用固定的控件。
 
-第二个子控件中需要注意，layout_gravity 这个属性是必须指定的，因为我们需要告诉菜单是在屏幕的左边还是右边，指定 left 表示滑动菜单在左边，指定 right 表示滑动菜单在右边。制定了 start，表示会根据系统语言进行判断，如果系统语言是从左往右，比如英语、汉语，滑动菜单就在左边，如果系统语言是从右往左，比如阿拉伯语言，滑动菜单就在右边。
+第二个子控件中需要注意，layout_gravity 这个属性是必须指定的，因为我们需要告诉菜单是在屏幕的左边还是右边，指定 left 表示滑动菜单在左边，指定 right 表示滑动菜单在右边。制定了 start，表示会根据系统语言进行判断，如果系统语言是从左往右，比如英语、汉语，滑动菜单就在左边，如果系统语言是从右往左，比如阿拉伯语言，滑动菜单就在右边。
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.widget.DrawerLayout
@@ -85,7 +85,7 @@ Material Design 建议的做法是在 ToolBar 的最左边加入一个导航按�
 
 getSupportActionBar() 方法得到了 Action 的示例，虽然这个 ActionBar 的具体实现由 Toolbar 来完成的。
 
-ActionBar.setDisplayHomeAsUpEnabled() 方法让导航按钮显示出来。
+ActionBar.setDisplayHomeAsUpEnabled() 方法让导航按钮显示出来。
 
 ActionBar.setHomeAsUpIndicator() 方法来设置一个导航按钮图标。
 
