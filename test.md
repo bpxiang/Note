@@ -1,0 +1,227 @@
+# 数组
+数组是一种数据结构， 用来存储同一类型值的集合。通过一个整型下标可以访问数组中的每一个值。
+
+$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$
+
+| sss | dsfs | dsf | sss |
+|----|:----|:---:|----:|
+|11111111|11111111|111111111|111111111|
+|22|222|222|222|
+|11111111|11111111|111111111|111111111|
+|22|222|222|222|
+|11111111|11111111|111111111|111111111|
+|22|222|222|222|
+|11111111|11111111|111111111|111111111|
+|22|222|222|222|
+|11111111|11111111|111111111|111111111|
+|22|222|222|222|
+|11111111|11111111|111111111|111111111|
+|22|222|222|222|
+|11111111|11111111|111111111|111111111|
+|22|222|222|222|
+
+在声明数组变量时，需要指出数组类型 (数据元素类型紧跟 [] ) 和数组变量的名字。 下面声明了整型数组 a:
+```
+int[] a;
+```
+不过，这条语句只声明了变量 a，并没有将 a  初始化为一个真正的数组。应该使用 new 运算符创建数组。
+```
+int[] a = new int[100];
+```
+
+***注释:*** 可以使用下面两种形式声明数组 `int[] a;` 或 `int a口;` 大多数 Jav 应用程序员喜欢使用第一种风格， 因为它将类型 int[] (整型数组)与变量名分开了。
+
+创建一个数字数组时，所有元素都初始化为0。boolean数组的元素会初始化为false。 对象数组的元素则初始化为一个特殊值 null, 这表示这些元素(还)未存放任何对象。
+
+***警告:*** 如果创建了一个 100 个元素的数组， 并且试图访问元素 a[100] (或任何在 0 ~ 99
+之外的下标，) 程序就会引发 `“array index out of bounds”` 异常而终止执行。
+
+一旦创建了数组， 就不能再改变它的大小(尽管可以改变每一个数组元素)。
+
+## 1.1 for each 循环
+
+Java 有一种功能很强的循环结构，可以用来依次处理数组中的每个元素（其他类型的元素集合亦可）而不必为指定下标值而分心。
+
+这种增强的 for 循环的语句格式为：
+```
+for (variable : collection) statement
+```
+定义一个变量用于暂存集合中的每一个元素，并执行相应的语句（语句块）。collection 这一结合表达式必须是一个数组或者是一个实现了 Iterable 接口的类对象。
+
+```
+for (int element : a) {
+    System.out.println(element);
+}
+```
+这个循环应该读作“循环 a 中的每一个元素”（for each element a）。
+
+***提示：*** 有个更加简单的方式打印数组中的所有值，即利用 Arrays 类的 toString 方法。调用 Arrays.toString(a)，返回一个包含数组元素的字符串，这些元素被放置在括号内，并用逗号分隔，例如“[2, 3, 5, 7, 11, 13]”。
+
+## 1.2 数组初始化以及匿名数组
+
+在 Java 中，提供了一种创建数组对象并同时赋予初始值的简化书写形式。
+```
+int[] smallPrimes = {2, 3, 5, 7, 11, 13};
+```
+请注意，在使用这种语句时，不需要调用 new。
+初始化匿名数组：
+```
+new int[] {17, 19, 23, 29, 31, 37};
+```
+这种表示法将创建一个新数组并利用括号中提供的值进行初始化，数组的大小就是初始值的个数。使用这种语法形式可以在不创建新变量的情况下重新初始化一个数组。
+```
+smallPrimes = new int[] {17, 19, 23, 29, 31, 37};
+```
+这是下列语句的简写形式：
+```
+int[] anonymous = {17, 19, 23, 29, 31, 37};
+smallPrimes = anonymous;
+```
+
+***注释：*** 在 Java 中，允许数组长度为 0。在编写一个结果为数组的方法时，如果碰巧结果为空，则这种语法形式就显得非常有用。此时可以创建一个长度为 0 的数组：
+```
+new elementType[0]
+```
+注意，数组长度为 0 与 null 不同。
+
+## 1.3 数组拷贝
+
+在 Java 中，允许将一个数组变量拷贝给另一个数组变量。这时，两个变量将引用同一个数组。
+
+如果希望将一个数组的所有值拷贝到一个新的数组中去，就要使用 Arrays 类的 copyOf 方法。
+```
+int[] copiedLuckyNumbers =
+        Arrays.copyOf(luckyNumbers, luckyNumbers.length);
+```
+
+如果数组元素是数值型，那么多余的元素将被赋值为 0；如果数组元素是布尔型，则将赋值为 false。相反，如果长度小于原始数组的长度，则只拷贝最前面的数据元素。
+
+## 1.4 命令行参数
+
+每一个 Java 应用程序都有一个带 String arg[] 参数的 main 方法。这个参数表明 main 方法将接收一个字符串数组，也就是命令行参数。
+```
+public class Message {
+    public static void main(String[] args) {
+        if (args.length == 0 || args[0].equals("-h")) {
+            System.out.print("Hello, ");
+        }else if(args[0].equals("-g")) {
+            System.out.print("Goodbye, ");
+        }
+        // print the other command-line argument
+        for(int i = 1; i < args.length; i++) {
+            System.out.print(" " + args[i]);
+        }
+        System.out.println("!");
+    }
+}
+```
+如果使用下面这种形式运行这个程序：
+```
+java Message -g cruel world
+```
+args 数组将包含下列内容：
+```
+args[0]: "-g"
+args[1]: "cruel"
+args[2]: "world"
+```
+这个程序将显示下列信息：`Goodbye, cruel world!`
+
+在 Java 应用程序的 main 方法中，程序名并没有存储在 args 数组中。
+
+## 1.5 数组排序
+
+可以实用 Arrays 类中的 sort 方法
+```Java
+int[] a = new int[10000];
+...
+Arrays.sort(a);
+```
+这个方法实用了优化的快速排序算法。快速排序算法对于大多数数据集合来说都是效率比较搞的。
+
+### java.util.Arrays 1.2
+* static String toString(type[] a) 5.0
+>返回包含 a 中数据元素的字符串，这些数据元素被放在括号内，并用逗号分隔。  
+参数： a 类型为 int、long、short、char、byte、boolean、float 和 double 的数组。
+* static type copyOf(type[] a, int length) 6  
+* static type copyOfRange(type[] a, int start, int end)
+>返回与 a 类型相同的一个数组，其长度为 length 或者 end-start，数组元素为 a 的值。
+参数 a: 类型为 int、long、short、char、byte、boolean、float 或 double 的数组
+参数 start: 起始下标（包含这个值）
+参数 end: 终止下标（不包含这个值）。这个值可能大于 a.length 。在这种情况下，结果为 0 或 false。
+参数 length: 拷贝的数组长度。如果 length 值大于 a.length，结果为 0 或 false；否则，数组中只有前面 length 个数据元素的拷贝值。
+* static void sort(type[] a)
+> 采用优化的快速排序算法对数组进行排序。
+参数 a: 类型为 int、long、short、chart、byte、boolean、float 或 double 的数组。
+* static int binarySearch(type[] a, type v)
+* static int binarySearch(type[] a, int stat, int end, type v)
+>采用二分搜索算法查找值 v。如果查找成功，则返回相应的下标值；否则，返回一个负数值 r。 -r-1 是为保持 a 有序 v 应插入的位置。
+参数 a: 类型为 int， long、short、char、byte、boolean、float 或 double 的有序数组。
+参数 start: 起始下标（包含这个值）
+参数 end: 终止下标（不包含这个值）
+参数 v：同 a 的数据元素类型相同的值
+* static void fill(type[] a, type v)
+>将数组的所有数据元素设置为 v。
+参数 a: 类型为 int、long、short、char、byte、boolean、float 或 double 的数组。
+参数 v: 与 a 数据元素类型相同的一个值。
+* static boolean equals(type[] a, type[] b)
+如果两个数组大小相同，并且下标相同的元素都对应相等，返回true。
+参数 a、b: 类型为 int、long、short、char、byte、boolean、float 或 double 的两个数组。
+
+## 1.6 多维数组
+
+多维数组将使用多个下标访问数组元素，它适用用于表示表格或更加复杂的排列方式。
+
+在 Java 中，声明一个二维数组：
+```java
+double[][] balances;
+```
+与一维数组一样，在调用 new 对多维数组进行初始化之前不能使用它。在这里可以这样初始化：
+``` java
+balances = new double[NYEARS][NARTES];
+```
+
+另外，如果知道数组元素，就可以不调用 new，就可以不调用 new，而直接使用简化的书写形式对多维数组进行初始化。
+```java
+int[][] magicSquare = {
+    {16, 3, 2, 13},
+    {5, 10, 11, 8},
+    {9, 6, 7, 12},
+    {4, 15, 14, 1}
+};
+```
+
+一旦数组被初始化，就可以利用两个方括号访问每个元素，magicSquare[i][j]。
+
+for each 循环语句不能自动处理二维数组的每一个元素。它是按照行，也就是一维数组处理的。要访问二维数组 a 的所有元素，需要使用两个嵌套的循环：
+```java
+for (double[] row : a)
+    for(double value : row)
+        do something with value
+```
+
+要想快速打印一个二维数组元素列表，可以调用：
+```java
+System.out.println(Arrays.deepToString(a));
+```
+输出格式为:
+```java
+[[16, 3, 2, 13], [5, 10, 11, 8], [9, 6, 7, 12], [4, 15, 14, 1]]
+```
+
+## 1.7 不规则数组
+
+Java 实际上没有多维数组，只有一维数组。多维数组被被解释为“数组的数组”。
+
+可以方便地构造一个“不规则”数组，即数组的每一行有不同的长度。要想创建一个不规则数组，首先需要分配一个具有所含行数的数组。
+```java
+int[][] odds = new int[SIZE][];
+```
+接下来，分配这些行。
+```java
+for(int n = 0; n < SIZE; n++) {
+    odds[n] = new int[n + 1];
+}
+```
+
+当创建 new double[10][6] 时，这个循环将自动地执行。当需要不规则数组时，只能单独地创建行数组。
