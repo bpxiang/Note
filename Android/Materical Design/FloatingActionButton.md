@@ -1,6 +1,7 @@
 # FloatingActionButton
-
-FloatingActionButton 是 Design Support 库中提供的一个控件，这个控件可以帮助我们比较轻松地实现悬浮按钮的效果，默认使用 colorAccent 来作为按钮的颜色。
+>time: 2017-11-10 17:50:32  
+>key: Materical Design, FloatingActionButton  
+>FloatingActionButton 是 Design Support 库中提供的一个控件，这个控件可以帮助我们比较轻松地实现悬浮按钮的效果，默认使用 colorAccent 来作为按钮的颜色。
 
 FloatingActionButton 和普通的 Button 没什么两样。
 

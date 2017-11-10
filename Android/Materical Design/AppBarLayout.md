@@ -1,6 +1,7 @@
 # AppBarLayout
-
-AppBarLayout 实际上是一个垂直方向的 LinearLayout，它内部做了很多滚动事件的封装，并应用了一些 Material Design 的设计理念。
+>time 2017-11-10 17:43:53  
+>key: Materical Design, AppBarLayout  
+>AppBarLayout 实际上是一个垂直方向的 LinearLayout，它内部做了很多滚动事件的封装，并应用了一些 Material Design 的设计理念。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

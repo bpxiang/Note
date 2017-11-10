@@ -1,6 +1,7 @@
 # NavigationView
-
-NavigationView 是 Design Support 库中提供的一个控件，它不仅仅是严格按照 Material Design 的要求来进行设计的。而且还可以将滑动菜单页面的实现变得非常简单。
+>time: 2017-11-10 17:51:39   
+>key: Materical Design, NavigationView  
+>NavigationView 是 Design Support 库中提供的一个控件，它不仅仅是严格按照 Material Design 的要求来进行设计的。而且还可以将滑动菜单页面的实现变得非常简单。
 
 ## 1. 添加依赖
 `app/build.gradle` 添加依赖关系
