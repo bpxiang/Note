@@ -1,6 +1,6 @@
 # CardView
->time: 2017-11-10 17:48:19  
->key: Materical Design, CardView  
+>key: 2017-11-10 17:48:19  
+>keyword: Materical Design, CardView  
 >CardView 是用于实现卡片式布局效果的重要控件，由 appcompat-v7 库提供。实际上，CardView 也是一个 FrameLayout，而是额外提供了圆角和阴影等效果，看上去会有立体效果。
 
 ```xml

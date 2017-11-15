@@ -1,6 +1,6 @@
 # 伸缩容器属性
-> time: 2017-11-13 09:48:05  
-> key: 伸缩容器属性,  display,  flex-direction, flex-wrap, flex-flow, justify-content, align-items, align-content  
+>key: 2017-11-13 09:48:05  
+>keyword: 伸缩容器属性,  display,  flex-direction, flex-wrap, flex-flow, justify-content, align-items, align-content  
 * display
 * flex-direction
 * flex-wrap

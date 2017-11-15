@@ -1,6 +1,6 @@
 # SwipeRefreshLayout
->time: 2017-11-10 17:52:37   
->key: Materical Design, SwipeRefreshLayout  
+>key: 2017-11-10 17:52:37   
+>keyword: Materical Design, SwipeRefreshLayout  
 >SwipeRefreshLayout 就是用于实现下拉刷新功能的核心类，它是由 support-v4 库提供的。
 
 ```xml

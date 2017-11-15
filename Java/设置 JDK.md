@@ -1,4 +1,7 @@
 # 设置 JDK
+>key: 2017-11-15 17:36:33  
+>keyword: JDK
+
 * 在 Windows 上，启动安装程序。会询问你要在哪里安装 JDK。最好不要接受路径名中包含空格的默认位置，如 `c:\Proram File\Java\jdk1.8.0_version`。取出路径名中的`Program File`部分就可以了。
 * 在 Mac 上，运行安装程序。这会把软件安装到` Library/Java/JavaVirtualMachines/jdk1.8.0_version.jdk/Contents/Home`
 * 在 Linux 上，只需要把 .tar.gz 文件解压缩到你选择的摸个位置，如你的主目录，或者 /opt。如果从 PRM 文件安装，则要反复检查是否安装在 `usr/java/jdk1.8.0_version`。

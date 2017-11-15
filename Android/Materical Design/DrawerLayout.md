@@ -1,6 +1,6 @@
 # DrawerLayout
->time: 2017-11-10 17:50:06  
->key: Materical Design, DrawerLayout  
+>key: 2017-11-10 17:50:06  
+>keyword: Materical Design, DrawerLayout  
 >DrawerLayout 由 support-v4 库提供的。DrawerLayout 中放置了两个直接子控件，第一个子控件是 FrameLayout，用于作为主屏幕中显示的内容，第二个子控件作为滑动菜单中显示的内容，DrawerLayout 并没有限制只能使用固定的控件。
 
 第二个子控件中需要注意，layout_gravity 这个属性是必须指定的，因为我们需要告诉菜单是在屏幕的左边还是右边，指定 left 表示滑动菜单在左边，指定 right 表示滑动菜单在右边。制定了 start，表示会根据系统语言进行判断，如果系统语言是从左往右，比如英语、汉语，滑动菜单就在左边，如果系统语言是从右往左，比如阿拉伯语言，滑动菜单就在右边。

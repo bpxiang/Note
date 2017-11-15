@@ -1,6 +1,6 @@
 # CoordinatorLayout
->time: 2017-11-10 17:49:45  
->key: Materical Design, CoordinatorLayout  
+>key: 2017-11-10 17:49:45  
+>keyword: Materical Design, CoordinatorLayout  
 >CoordinationLayour 可以说是一个加强版的 FrameLayout，这个布局也是由 Design Support 库提供的，在普通情况下的作用和 FrameLayout 基本一致。
 
 CoordinatorLayout 可以监听其所有子控件的各种事件，然后自动帮助我们做出最为合理的响应。

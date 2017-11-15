@@ -1,6 +1,6 @@
 # CollapsingToolbarLayout
->time: 2017-11-10 17:49:03  
->key: Materical Design, CollapsingToolbarLayout  
+>key: 2017-11-10 17:49:03  
+>keyword: Materical Design, CollapsingToolbarLayout  
 >CollapsingToolbarLayout 是一个作用于 Toolbar 基础之上的布局，它也是由 Design Support 库提供的。CollapsingToolbarLayout 可以让 Toolbar 的效果变得更加丰富，不仅仅是展示一个标题栏，而是能够实现非常华丽的效果。
 
 CollapsingToolbarLayout 是不能独立存在的，它在设计的时候就被限定只能作为 AppBarLayout 的直接子布局来使用。而 AppBarLayout 又必须是 CoordinatorLayout 的子布局。
