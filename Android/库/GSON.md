@@ -1,6 +1,5 @@
 # GSON
 >key: 2017-11-22 17:01:25  
->keyword: GSON, android library  
 >GSON 是 Google 提供解析 JSON 数据的开源库。
 
 [GSON GitHub 主页](https://github.com/google/gson)
