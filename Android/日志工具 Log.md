@@ -1,6 +1,6 @@
 # 日志工具 Log
 >key: 2017-11-13 09:46:19  
->keyword: 日志工具 Log,   
+  
 Log（android.util.Log）,提供了 5 个方法：
 * Log.v()。 用于打印哪些最为繁琐的、意义最小的日志信息。对应级别 verbose，是 Android 日志里面级别最低的一种。
 * Log.d()。用于打印一些调试信息，这些信息对你调试程序和分析问题应该是有帮助的。对应级别 debug，比 verbose 高一级。
