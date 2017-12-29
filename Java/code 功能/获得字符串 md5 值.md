@@ -22,8 +22,19 @@ String md5code = DigestUtils.md5DigestAsHex(inputStream);
      */
     private static String hash(String str, String hashType) throws NoSuchAlgorithmException, UnsupportedEncodingException {
         MessageDigest md = MessageDigest.getInstance(hashType);
+        md.reset();
         md.update(str.getBytes("UTF-8"));
-        return new BigInteger(1, md.digest()).toString(16);
+        //return new BigInteger(md.digest()).toString(16);
+        byte[] byteArray = md.digest();    
+        StringBuffer md5StrBuff = new StringBuffer();    
+        for (int i = 0; i < byteArray.length; i++)    
+        {
+            if (Integer.toHexString(0xFF & byteArray[i]).length() == 1)    
+                md5StrBuff.append("0").append(Integer.toHexString(0xFF & byteArray[i]));    
+            else
+                md5StrBuff.append(Integer.toHexString(0xFF & byteArray[i]));    
+        }
+        return md5StrBuff.toString(); 
     }
     
     /**

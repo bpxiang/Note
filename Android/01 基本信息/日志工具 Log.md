@@ -10,6 +10,13 @@ Log（android.util.Log）,提供了 5 个方法：
 
 logd + Tab 键，自动生成 Log.d()。  
 logt + Tab 键，自动生成 TAG 变量。
+
 ```java
 private static final String TAG = "HelloWorldActivity";
+
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.hello_world_layout);
+    Log.d(TAG, "onCreate: execute");
+}
 ```
