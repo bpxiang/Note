@@ -1,0 +1,8 @@
+树莓派Raspbian系统默认登录用户名:
+用户名：pi
+密码： raspberry （可在raspi-config中修改）。
+
+## 设置 root 用户
+ 使用pi账户进行登陆命令行，执行命令：`sudo passwd root` 设置root用户密码，然后在执行`sudo passwd --unlock root` 开启root账户，在使用【su root】测试是否生效！
+
+重新锁定root账户可执行命令：sudo passwd --lock root
