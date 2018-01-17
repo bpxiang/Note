@@ -8,7 +8,7 @@ Spring 使用简单的 POJO（Plain Old Java Object，即无任何限制的普�
 ## 1. Spring 的模块
 
 ### Spring Framework Runtime
-![](./.images/SpringFrameworkRuntime.png)
+![](./.images/spring-framework-runtime.png)
 
 ### 1. 核心容器（Core Container）
 * Spring-Core: 核心工具类，Spring 其他规模大量使用 Spring-Core
