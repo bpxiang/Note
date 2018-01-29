@@ -12,15 +12,15 @@ Spring 使用简单的 POJO（Plain Old Java Object，即无任何限制的普�
 
 ### 1. 核心容器（Core Container）
 * Spring-Core: 核心工具类，Spring 其他规模大量使用 Spring-Core
-* Spring-Beans: Spring 定义 Bean 的支持
-* Spring-Context: 运行时 Spring 容器
+* Spring-Beans: Spring 定义 Bean 的支持
+* Spring-Context: 运行时 Spring 容器
 * Spring-Context-Support: Spring 容器对第三方包的集成支持
 * Spring-Expression: 使用表达式语言在运行时查询和操作对象
 ### 2. AOP
 * Spring-AOP: 基于代理的 AOP 支持
 * Spring-Aspects: 基于 AspectJ 的 AOP 支持。
 ### 3. 消息（Messaging）
-* Spring-Messaging: 对消息架构和协议的支持
+* Spring-Messaging: 对消息架构和协议的支持
 ### 4. Web
 * Spring-Web: 提供基础的 Web 集成的功能，在 Web 项目中提供 Spring 的容器。
 * Spring-Webmvc: 提供基于 Servlet 的 Spring MVC
