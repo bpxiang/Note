@@ -1,4 +1,6 @@
+hmset acticle: 1 title xx timestamp 1476536196 content xxxx 
+... 
+hmset acticle: k title yy timestamp 1476512536 content yyyy 
+...
 
-付磊;张益军.Redis开发与运维(数据库技术丛书)(Kindle位置1007).\x{673A}\x{68B0}\x{5DE5}\x{4E1A}\x{51FA}\x{7248}\x{793E}.Kindle版本.
-
-付磊;张益军.Redis开发与运维(数据库技术丛书)(Kindle位置1006-1007).\x{673A}\x{68B0}\x{5DE5}\x{4E1A}\x{51FA}\x{7248}\x{793E}.Kindle版本.
+付磊; 张益军. Redis开发与运维 (数据库技术丛书) (Kindle 位置 1093-1094). \x{673A}\x{68B0}\x{5DE5}\x{4E1A}\x{51FA}\x{7248}\x{793E}. Kindle 版本. 
