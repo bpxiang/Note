@@ -5,7 +5,7 @@
 sdiff key [key ...]
 ```
 求 `user:2:follow` 和 `user:2:follow` 两个集合的差集。
-```
+```bash
 127.0.0.1:6379> smembers user:1:follow
 1) "it"
 2) "sports"
