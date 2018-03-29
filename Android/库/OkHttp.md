@@ -1,7 +1,8 @@
 # OkHttp
 >key: 2017-11-20 16:05:58  
 >keyword: OkHttp, android library  
->OkHttp 是 Square 公司的开源网络通信库。OkHttp 不仅在接口封装上做得简单易用，在底层实现上也是自成一派。
+>
+OkHttp 是 Square 公司的开源网络通信库。OkHttp 不仅在接口封装上做得简单易用，在底层实现上也是自成一派。
 
 [OkHttp GitHub 主页](https://github.com/square/okhttp)
 

@@ -19,7 +19,7 @@ ttl 命令会返回键的剩余过期时间，它有 3 种返回值：
 (integer) -1
 127.0.0.1:6379> expire hello 10
 (integer) 1
-# 还剩 7 秒
+# 还剩 7 秒
 127.0.0.1:6379> ttl hello
 (integer) 7
 127.0.0.1:6379> ttl hello

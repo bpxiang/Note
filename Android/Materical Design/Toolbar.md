@@ -5,7 +5,7 @@
 
 Toolbar 的强大之处在于，不仅继承了 ActionBar 的所有功能，而且灵活性很高，可以配合其他控件来完成一些 Material Design 的效果。
 
-ToolBar 控件是由 appcompat-v7 库提供的。
+ToolBar 控件是由 appcompat-v7 库提供的。
 
 ## 1. 隐藏 ActionBar
 ### 1. 打开 AndroidManifest.xml

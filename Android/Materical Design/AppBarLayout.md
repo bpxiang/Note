@@ -63,7 +63,7 @@
 ```
 
 `Toolbar` 的 `app:layout_scrollFlags` 属性：
-* scroll 表示当 RecyclerView 向上滚动的时候，Toolbar 会跟着一起向上滚动并实现隐藏；
+* scroll 表示当 RecyclerView 向上滚动的时候，Toolbar 会跟着一起向上滚动并实现隐藏；
 * enterAlways 表示当 RecyclerView 向下滚动的时候，Tollbar 会跟着一起向下滚动并重新显示。
 * snap 表示当 Toolbar 还没有完全隐藏或显示的时候，会根据当前滚动的距离，自动选择是隐藏还是显示。
 

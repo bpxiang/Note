@@ -10,9 +10,9 @@ mksdcard 命令的语法格式如下：
 ```
 mksdcard 64M D:\advs\.android\avd\leegang.avd\sdcard.img
 ```
-上面命令创建了一个大小为 64MB 的虚拟 SD 卡，该 SD 卡对应的镜像文件为 `D:\advs\.android\avd\leegang.avd\sdcard.img`。
+上面命令创建了一个大小为 64MB 的虚拟 SD 卡，该 SD 卡对应的镜像文件为 `D:\advs\.android\avd\leegang.avd\sdcard.img`。
 
-如果希望在启动模拟器时使用制定的虚拟 SD 卡，则在启动模拟器时增加 `-sdcard <file>` 选项，其中 `<file>` 代表虚拟 SD 卡的文件镜像。例如如下命令：
+如果希望在启动模拟器时使用制定的虚拟 SD 卡，则在启动模拟器时增加 `-sdcard <file>` 选项，其中 `<file>` 代表虚拟 SD 卡的文件镜像。例如如下命令：
 ```bash
 emulator -avd crazyit -sdcard d:\sdcard.img
 ```

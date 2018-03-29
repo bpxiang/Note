@@ -1,9 +1,9 @@
 # CollapsingToolbarLayout
 >key: 2017-11-10 17:49:03  
 >keyword: Materical Design, CollapsingToolbarLayout  
->CollapsingToolbarLayout 是一个作用于 Toolbar 基础之上的布局，它也是由 Design Support 库提供的。CollapsingToolbarLayout 可以让 Toolbar 的效果变得更加丰富，不仅仅是展示一个标题栏，而是能够实现非常华丽的效果。
+>CollapsingToolbarLayout 是一个作用于 Toolbar 基础之上的布局，它也是由 Design Support 库提供的。CollapsingToolbarLayout 可以让 Toolbar 的效果变得更加丰富，不仅仅是展示一个标题栏，而是能够实现非常华丽的效果。
 
-CollapsingToolbarLayout 是不能独立存在的，它在设计的时候就被限定只能作为 AppBarLayout 的直接子布局来使用。而 AppBarLayout 又必须是 CoordinatorLayout 的子布局。
+CollapsingToolbarLayout 是不能独立存在的，它在设计的时候就被限定只能作为 AppBarLayout 的直接子布局来使用。而 AppBarLayout 又必须是 CoordinatorLayout 的子布局。
 
 ```xml
 <android.support.design.widget.CoordinatorLayout
@@ -46,10 +46,10 @@ CollapsingToolbarLayout 是不能独立存在的，它在设计的时候就被�
 
 `android:theme` 属性制定了一个 `ThemeOverlay.AppCompat.Dark.ActionBar` 的主题。
 
-`app:contentScrim` 属性用于制定 `CollapsingToolbarLayout` 在趋于折叠状态以及折叠之后的背景色，其实 `CoolapsingToolbarLayout` 在折叠之后就是一个普通的 Toolbar，那么背景色肯定应该是 colorPrimary 了。
+`app:contentScrim` 属性用于制定 `CollapsingToolbarLayout` 在趋于折叠状态以及折叠之后的背景色，其实 `CoolapsingToolbarLayout` 在折叠之后就是一个普通的 Toolbar，那么背景色肯定应该是 colorPrimary 了。
 
 `Toolbar - app:layout_scrollFlags` 属性：
-* `scroll` 表示当 RecyclerView 向上滚动的时候，Toolbar 会跟着一起向上滚动并实现隐藏；
+* `scroll` 表示当 RecyclerView 向上滚动的时候，Toolbar 会跟着一起向上滚动并实现隐藏；
 * `exitUntilCollapsed` 表示当 `CollapsingToolbarLayout` 随着滚动完成折叠之后就保留在界面上，不再移除屏幕。
 
 ***content_fruit.xml***
@@ -94,7 +94,7 @@ CollapsingToolbarLayout 是不能独立存在的，它在设计的时候就被�
 ```
 
 `app:layout_collapseMode` 用于指定当前控件在 CollapsingToolbarLayout 折叠过程中的折叠模式。
-* pin: 表示在折叠的过程中位置始终保持不变
+* pin: 表示在折叠的过程中位置始终保持不变
 * parallax: 表示会在折叠的过程中产生一定的错位偏移，这种模式的视觉效果会非常好。
 
 ***activity_fruit.xml***
@@ -126,7 +126,7 @@ CollapsingToolbarLayout 是不能独立存在的，它在设计的时候就被�
 </android.support.design.widget.CoordinatorLayout>
 ```
 
-NestedScrollView 雨荨使用滚动的方式来查看屏以外的数据，还增加了嵌套响应滚动事件的功能。内部只允许存在一个直接字布局。想要放入很多东西的化，通常都会嵌套一个 LinearLayout。
+NestedScrollView 雨荨使用滚动的方式来查看屏以外的数据，还增加了嵌套响应滚动事件的功能。内部只允许存在一个直接字布局。想要放入很多东西的化，通常都会嵌套一个 LinearLayout。
 
 *** FruitActivity.java ***
 ```java

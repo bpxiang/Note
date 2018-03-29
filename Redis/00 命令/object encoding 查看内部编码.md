@@ -1,4 +1,4 @@
-# object encoding 查看内部编码
+# object encoding 查看内部编码
 >time: 2018-02-26 15:08:26  
 
 object encoding 命令查询内部编码：

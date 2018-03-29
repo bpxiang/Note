@@ -5,7 +5,7 @@
 getrange key start end
 ```
 
-start 和 end 分别是开始和结束的偏移量，偏移量从 0 开始计算。
+start 和 end 分别是开始和结束的偏移量，偏移量从 0 开始计算。
 ```
 127.0.0.1:6379> get redis
 "best"

@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 ## 2. 水平进度条
 
-style 属性可以将它指定成水平进度条。
+style 属性可以将它指定成水平进度条。
 ```xml
 <ProgressBar
     android:id="@+id/progress_bar"

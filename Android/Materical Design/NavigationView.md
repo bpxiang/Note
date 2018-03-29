@@ -1,7 +1,8 @@
 # NavigationView
 >key: 2017-11-10 17:51:39   
->keyword: Materical Design, NavigationView  
->NavigationView 是 Design Support 库中提供的一个控件，它不仅仅是严格按照 Material Design 的要求来进行设计的。而且还可以将滑动菜单页面的实现变得非常简单。
+>keyword: Materical Design, NavigationView  
+>
+NavigationView 是 Design Support 库中提供的一个控件，它不仅仅是严格按照 Material Design 的要求来进行设计的。而且还可以将滑动菜单页面的实现变得非常简单。
 
 ## 1. 添加依赖
 `app/build.gradle` 添加依赖关系
@@ -26,7 +27,7 @@ allprojects {
 ```
 
 ## 2. 代码
-### 2.1 活动布局文件
+### 2.1 活动布局文件
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.widget.DrawerLayout
