@@ -1,6 +1,8 @@
-# 伸缩容器属性
+# 伸缩容器
 >key: 2017-11-13 09:48:05  
->keyword: 伸缩容器属性,  display,  flex-direction, flex-wrap, flex-flow, justify-content, align-items, align-content  
+>keyword: 伸缩容器属性,  display,  flex-direction, flex-wrap, flex-flow, justify-content, align-items, align-content 
+
+伸缩容器支持的属性有： 
 * display
 * flex-direction
 * flex-wrap
@@ -18,7 +20,7 @@ HTML 代码
 <span class="flex-container"></span>
 ```
 
-### 1.1 flex
+### 1. flex
 >这个值用于产生块级伸缩容器  
 
 ```css
@@ -34,6 +36,8 @@ HTML 代码
     display: inline-flex;
 }
 ```
+
+这个时候，CSS 的 columns 在伸缩容器上没有效果，float、clear 和 vertical-align 在伸缩容器上没有效果。
 
 ## 2. flex-direction
 该属性用于指定主轴的方向  
@@ -96,6 +100,10 @@ HTML 代码
 .flex-container {
     display: flex;
     flex-direction: column-reverse;
+}
+.flex-item {
+    width: 68px;
+    height: 68px;
 }
 ```
 [示例](./demo/flex-direction_column-reverse.html)
@@ -518,3 +526,90 @@ flex-wrap: wrap 这个一定到开启，且它在出现换行的情况下才能�
 [示例](./demo/align-content_flex-end.html)
 
 ![align-content: flex-end](./.images/align-content_flex-end.png)
+
+### 7.3 center
+伸缩项目向交叉轴的中间位置靠齐。
+
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 360px;
+    height: 260px;
+}
+.flex-item {
+    width: 68px;
+    height: 68px;
+}
+```
+
+[示例](./demo/align-content_center.html)
+
+![align-content: flex-end](./.images/align-content_center.png)
+
+### 7.4 space-between
+伸缩项目在交叉轴中平均分布。
+
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 360px;
+    height: 260px;
+}
+.flex-item {
+    width: 68px;
+    height: 68px;
+}
+```
+
+[示例](./demo/align-content_space-between.html)
+
+![align-content: space-between](./.images/align-content_space-between.png)
+
+### 7.5 space-around
+伸缩项目在交叉轴中平均分布，且在两边各有一半空间。
+
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    width: 360px;
+    height: 260px;
+}
+.flex-item {
+    width: 68px;
+    height: 68px;
+}
+```
+
+[示例](./demo/align-content_space-around.html)
+
+![align-content: space-between](./.images/align-content_space-around.png)
+
+### 7.5 stretch (默认值)
+
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    width: 360px;
+    height: 260px;
+}
+.flex-item {
+    width: 68px;
+    height: 68px;
+}
+```
+
+[示例](./demo/align-content_stretch.html)
+
+![align-content: stretch](./.images/align-content_stretch.png)

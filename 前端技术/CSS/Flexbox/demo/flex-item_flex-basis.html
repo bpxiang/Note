@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+        <title>FlexBox</title>
+        <style type="text/css">
+            .flex-container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+
+                width: 250px;
+                height: 260px;
+                border: 2px solid #868686;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .flex-item {
+                width: 68px;
+                height: 68px;
+                margin: 2px;
+                color: #FFFFFF;
+                text-align: center;
+                line-height: 68px;
+                font-size: 25px;
+                background-color: #686868;
+            }
+            .item5 {
+                flex-basis: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <span class="flex-container">
+            <span class="flex-item item1">1</span>
+            <span class="flex-item item2">2</span>
+            <span class="flex-item item3">3</span>
+            <span class="flex-item item4">4</span>
+            <span class="flex-item item5">5</span>
+        </span>
+    </body>
+</html>
