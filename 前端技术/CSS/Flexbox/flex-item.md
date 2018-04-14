@@ -9,7 +9,7 @@
 * flex
 * align-self
 ## 1. order
-用于定义项目的排列顺序。数值越小，排列要靠前，默认值为 0，其语法为：  
+用于定义项目的排列顺序。数值越小，排列要靠前，默认值为 0，其语法为：  
 `order: integer`
 
 HTML 代码
@@ -45,7 +45,7 @@ HTML 代码
 ![flex-wrap: nowrap](./.images/flex-item_order.png)
 
 ## 2. flex-grow
-该属性定义伸缩项目的放大比例，默认值为 0，即如果存在剩余空间，也不放大。如果所有伸缩项目的 flex-grow 设置为 1，那么每个伸缩项目将设置为一个大小相等的剩余空间。如果你将其中一个伸缩项目的 flex-grow 值设置为 2，那么这个伸缩项目所占的剩余空间是其他伸缩项目所占剩余空间的两倍。  
+该属性定义伸缩项目的放大比例，默认值为 0，即如果存在剩余空间，也不放大。如果所有伸缩项目的 flex-grow 设置为 1，那么每个伸缩项目将设置为一个大小相等的剩余空间。如果你将其中一个伸缩项目的 flex-grow 值设置为 2，那么这个伸缩项目所占的剩余空间是其他伸缩项目所占剩余空间的两倍。  
 `flex-grow: number /* 其默认值为 0 */`
 
 ```html
@@ -242,7 +242,7 @@ HTML 代码
 
 ![flex-item: align-self: flex-start](./.images/flex-item_align-self_flex-start.png)
 
-### 6.3 flex-end
+### 6.3 flex-end
 伸缩项目向交叉轴的结束为止靠齐。
 
 ```css
@@ -343,16 +343,16 @@ HTML 代码
     width: 68px;
 }
 #item1 {
-    align-self: stretch;
+    align-self: stretch;
 }
 
 #item2 {
-    align-self: stretch;
+    align-self: stretch;
     height: 68px;
 }
 
 #item3 {
-    align-self: stretch;
+    align-self: stretch;
     height: 68px;
 }
 ```
@@ -361,4 +361,4 @@ HTML 代码
 
 ![flex-item: align-self: stretch](./.images/flex-item_align-self_stretch.png)
 
-本里中交叉轴为垂直轴，所以只有在不设置高度的情况下才能看到效果。
+本里中交叉轴为垂直轴，所以只有在不设置高度的情况下才能看到效果。
