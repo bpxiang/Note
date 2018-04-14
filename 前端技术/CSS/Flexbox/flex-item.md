@@ -360,3 +360,5 @@ HTML 代码
 [示例](./demo/flex-item_align-self_stretch.html)
 
 ![flex-item: align-self: stretch](./.images/flex-item_align-self_stretch.png)
+
+本里中交叉轴为垂直轴，所以只有在不设置高度的情况下才能看到效果。
