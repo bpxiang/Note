@@ -183,3 +183,180 @@ HTML 代码
 [示例](./demo/flex-item_flex.html)
 
 ![flex-wrap: flex](./.images/flex-item_flex.png)
+
+## 6. align-selt
+该属性用来设置单独的伸缩项目在交叉轴上的对齐方式，会覆盖默认的对齐方式。  
+`align-self: auto | flex-start | flex-end | center | baseline | stretch`
+
+```html
+<span class="flex-container">
+    <span class="flex-item" id="item1">1</span>
+    <span class="flex-item" id="item2">2</span>
+    <span class="flex-item" id="item3">3</span>
+</span>
+```
+
+### 6.1 auto
+伸缩项目按照自身设置的宽高显示，如果没有设置，则按 stretch 来计算其值。
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 360px;
+    height: 260px;
+}
+.flex-item {
+    width: 68px;
+    height: 68px;
+}
+#item3 {
+    align-self: auto;
+}
+```
+
+[示例](./demo/flex-item_align-self_auto.html)
+
+![flex-item: align-self: auto](./.images/flex-item_align-self_auto.png)
+
+### 6.2 flex-start
+伸缩项目向交叉轴的开始位置靠齐。
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 360px;
+    height: 260px;
+}
+.flex-item {
+    width: 68px;
+    height: 68px;
+}
+#item3 {
+    align-self: flex-start;
+}
+```
+
+[示例](./demo/flex-item_align-self_flex-start.html)
+
+![flex-item: align-self: flex-start](./.images/flex-item_align-self_flex-start.png)
+
+### 6.3 flex-end
+伸缩项目向交叉轴的结束为止靠齐。
+
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 360px;
+    height: 260px;
+}
+.flex-item {
+    width: 68px;
+    height: 68px;
+}
+#item1 {
+    align-self: flex-end;
+}
+```
+
+[示例](./demo/flex-item_align-self_flex-end.html)
+
+![flex-item: align-self: flex-end](./.images/flex-item_align-self_flex-end.png)
+
+### 6.4 center
+伸缩项目向交叉轴的中心位置靠齐。
+
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 360px;
+    height: 260px;
+}
+.flex-item {
+    width: 68px;
+    height: 68px;
+}
+#item1 {
+    align-self: center;
+}
+```
+
+[示例](./demo/flex-item_align-self_center.html)
+
+![flex-item: align-self: center](./.images/flex-item_align-self_center.png)
+
+### 6.5 baseline
+伸缩项目按基线对齐
+
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 360px;
+    height: 260px;
+}
+.flex-item {
+    width: 68px;
+    height: 68px;
+}
+#item1 {
+    align-self: baseline;
+    font-size: 38px;
+}
+
+#item2 {
+    align-self: baseline;
+    font-size: 28px;
+}
+
+#item3 {
+    align-self: baseline;
+    font-size: 18px;
+}
+```
+
+[示例](./demo/flex-item_align-self_baseline.html)
+
+![flex-item: align-self: baseline](./.images/flex-item_align-self_baseline.png)
+
+每个伸缩项目都是沿交叉轴方向，按照前一个伸缩项目的基线作为对齐点的。
+
+### 6.6 stretch
+伸缩项目在交叉轴方向沾满s很所容器。
+
+
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 360px;
+    height: 260px;
+}
+.flex-item {
+    width: 68px;
+}
+#item1 {
+    align-self: stretch;
+}
+
+#item2 {
+    align-self: stretch;
+    height: 68px;
+}
+
+#item3 {
+    align-self: stretch;
+    height: 68px;
+}
+```
+
+[示例](./demo/flex-item_align-self_stretch.html)
+
+![flex-item: align-self: stretch](./.images/flex-item_align-self_stretch.png)
