@@ -12,7 +12,7 @@ String md5code = DigestUtils.md5DigestAsHex(inputStream);
 
 ## 2.
 ```java
-/**
+    /**
      * 计算字符串哈希值
      * @param str
      * @param hashType
