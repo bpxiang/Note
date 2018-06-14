@@ -1,0 +1,82 @@
+有关调用实时(JIT)调试而不是此对话框的详细信息，
+请参见此消息的结尾。
+
+************** 异常文本 **************
+System.InvalidOperationException: 处于 VirtualMode 中时，ListView RetrieveVirtualListItem 事件需要每个 ListView 列的列表视图子项。
+   在 System.Windows.Forms.ListView.WmReflectNotify(Message& m)
+   在 System.Windows.Forms.ListView.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+
+************** 已加载的程序集 **************
+mscorlib
+    程序集版本: 2.0.0.0
+    Win32 版本: 2.0.50727.8762 (QFE.050727-8700)
+    基本代码: file:///C:/Windows/Microsoft.NET/Framework/v2.0.50727/mscorlib.dll
+----------------------------------------
+opc
+    程序集版本: 1.1.0.0
+    Win32 版本: 1.1.0.0
+    基本代码: file:///D:/BHXZ/OPC/OPC%20Client%20EF-5/OPC.exe
+----------------------------------------
+System.Windows.Forms
+    程序集版本: 2.0.0.0
+    Win32 版本: 2.0.50727.5491 (Win7SP1GDR.050727-5400)
+    基本代码: file:///C:/Windows/assembly/GAC_MSIL/System.Windows.Forms/2.0.0.0__b77a5c561934e089/System.Windows.Forms.dll
+----------------------------------------
+System
+    程序集版本: 2.0.0.0
+    Win32 版本: 2.0.50727.8770 (QFE.050727-8700)
+    基本代码: file:///C:/Windows/assembly/GAC_MSIL/System/2.0.0.0__b77a5c561934e089/System.dll
+----------------------------------------
+System.Drawing
+    程序集版本: 2.0.0.0
+    Win32 版本: 2.0.50727.5495 (Win7SP1GDR.050727-5400)
+    基本代码: file:///C:/Windows/assembly/GAC_MSIL/System.Drawing/2.0.0.0__b03f5f7f11d50a3a/System.Drawing.dll
+----------------------------------------
+System.Configuration
+    程序集版本: 2.0.0.0
+    Win32 版本: 2.0.50727.5483 (Win7SP1GDR.050727-5400)
+    基本代码: file:///C:/Windows/assembly/GAC_MSIL/System.Configuration/2.0.0.0__b03f5f7f11d50a3a/System.Configuration.dll
+----------------------------------------
+System.Xml
+    程序集版本: 2.0.0.0
+    Win32 版本: 2.0.50727.5494 (Win7SP1GDR.050727-5400)
+    基本代码: file:///C:/Windows/assembly/GAC_MSIL/System.Xml/2.0.0.0__b77a5c561934e089/System.Xml.dll
+----------------------------------------
+System.Data
+    程序集版本: 2.0.0.0
+    Win32 版本: 2.0.50727.8762 (QFE.050727-8700)
+    基本代码: file:///C:/Windows/assembly/GAC_32/System.Data/2.0.0.0__b77a5c561934e089/System.Data.dll
+----------------------------------------
+System.Windows.Forms.resources
+    程序集版本: 2.0.0.0
+    Win32 版本: 2.0.50727.5420 (Win7SP1.050727-5400)
+    基本代码: file:///C:/Windows/assembly/GAC_MSIL/System.Windows.Forms.resources/2.0.0.0_zh-CHS_b77a5c561934e089/System.Windows.Forms.resources.dll
+----------------------------------------
+mscorlib.resources
+    程序集版本: 2.0.0.0
+    Win32 版本: 2.0.50727.8762 (QFE.050727-8700)
+    基本代码: file:///C:/Windows/Microsoft.NET/Framework/v2.0.50727/mscorlib.dll
+----------------------------------------
+
+************** JIT 调试 **************
+要启用实时(JIT)调试，
+该应用程序或计算机的 .config 文件(machine.config)的 system.windows.forms 节中必须设置
+jitDebugging 值。
+编译应用程序时还必须启用
+调试。
+
+例如: 
+
+<configuration>
+    <system.windows.forms jitDebugging="true" />
+</configuration>
+
+启用 JIT 调试后，任何无法处理的异常
+都将被发送到在此计算机上注册的 JIT 调试器，
+而不是由此对话框处理。
+
+
