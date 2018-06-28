@@ -13,7 +13,7 @@
 
 Spring MVC 建议把所有的视图页面存放在 WEB-INF 文件夹下，这样可以保护视图页面，避免直接向视图页面发送请求。
 
-![Spring MVC 请求 响应的完整流程](../_resource/images/spring_mvc_.png)
+![Spring MVC 请求 响应的完整流程](../images/spring_mvc_.png)
 
 Spring MVC 请求 --> 响应的完整工作流程如下：
 
