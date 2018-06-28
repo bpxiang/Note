@@ -11,7 +11,7 @@
 
 ## spring.xml
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 使用注解 -->
 <beans xmlns="http://www.springframework.org/schema/beans"
@@ -42,3 +42,7 @@
 <context:component-scan base-package="com.bpx.controller"/>
 ```
 应该将所有控制器类都放在基本包下，并且指定扫描改包，即`com.bpx.controller`，而不应该指定扫描`com.bpx` 包，以避免 Spring MVC 扫描无关的包。
+
+annotation 类型的处理映射器 RequestMappingHandlerMapping，它根据请求查找映射。  
+annotation 类型的处理适配器 RequestMappingHandlerAdapter，来完成对 Controller 类的 @RequestMapping 标注方法的调用。  
+视图解析器 InternalResourceViewResolver 来解析视图，将 View 呈现给用户。
