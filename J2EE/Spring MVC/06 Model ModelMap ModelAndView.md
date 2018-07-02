@@ -84,6 +84,7 @@ public class UserController {
 向 ModelAndView 对象中添加模型数据：
 ```java
 addObject(String attributeName, Object attributeValue);
+// 可以通过如下方法设置视图
 setViewName(String viewName);
 ```
 

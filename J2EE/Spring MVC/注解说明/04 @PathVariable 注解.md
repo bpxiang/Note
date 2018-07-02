@@ -1,4 +1,6 @@
 # @PathVariable 注解
+>time: 2018-07-02 22:14:52
+
 `org.springframework.web.bind.annotation.PathVariable` 注解类型可以非常方便地获得请求 URL 中的动态参数。@PathVariable 注解支持一个属性 value，类型为 String，表示绑定的名称，如果省略则默认绑定同名参数。
 
 ```java

@@ -1,4 +1,5 @@
 # @CookieValue 注解
+>time: 2018-07-02 22:09:08
 
 `org.springframework.web.bind.annotation.CookieValue` 用于将请求的 Cookie 数据映射到功能处理方法的参数上。
 

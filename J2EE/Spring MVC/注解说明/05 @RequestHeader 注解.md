@@ -1,4 +1,6 @@
 # @RequestHeader 注解
+>time: 2018-07-02 22:09:21
+
 `org.springframework.web.bind.annotation.RequestHeader` 注解类型用于将请求的头信息区数据映射到功能处理方法的参数上。
 
 | 属性 | 类型 | 是否必要 | 说明 |

@@ -1,8 +1,11 @@
 # @RequestMapping 注解
+>time: 2018-07-02 22:10:12
 
 `org.springframework.web.bind.annotation.ReqeustMapping` 注解类型指示 Spring 用哪一个类或方法来处理请求动作，该注解可用于类或方法。
 
-@RequestMapping 虽然也在 `org.springframework.web.bind.annotation` 下面，但是严格来说，它并不属于参数绑定注解。
+***
+**提示**：@RequestMapping 虽然也在 `org.springframework.web.bind.annotation` 下面，但是严格来说，它并不属于参数绑定注解。
+***
 
 @RequestMapping 可以用来注解一个控制器类，所有方法都将映射为相对于类级别的请求，表示该控制器处理的所有请求都被映射到 value 属性所指示的路径下。
 
