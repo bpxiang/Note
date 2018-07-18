@@ -30,7 +30,7 @@ protected void initStrategies(ApplicationContext context) {
 
 initStrategies 方法将在 WebApplicationContext 初始化后自动执行，自动扫描上下文的 Bean，根据名称或类型匹配的机制查找自定义的组件，如果没有找到则会装配一套 Spring 的默认组件。在 org.springframework.web.servlet 路径下有一个 DispatcherServlet.properties 配置文件，该文件指定了 DispatcherServlet 所使用的默认组件。
 
-#### org/springframework/web/servlet/DispatcherServlet.properties
+#### org/springframework/web/servlet/DispatcherServlet.properties
 ```
 # Default implementation classes for DispatcherServlet's strategy interfaces.
 # Used as fallback when no matching beans are found in the DispatcherServlet context.

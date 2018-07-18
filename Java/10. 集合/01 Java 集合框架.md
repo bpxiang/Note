@@ -20,7 +20,7 @@ public interface Queue<E> // a simplified form of the interface in the standard 
 2. 使用链表
 ![](../.images/9-2.png)
 
-每一个实现都可以通过一个实现了 Queue 接口的类表示。
+每一个实现都可以通过一个实现了 Queue 接口的类表示。
 ```java
 public class CircularArrayQueue<E> implements Queue<E> // not an actual library class
 {
@@ -55,15 +55,15 @@ public class LinkedListQueue<E> implements Queue<E> // not an actual library cla
 Queue<Customer> expressLane = new CircularArrayQueue<>(100);
 expressLane.add(new Customer("Harry"));
 ```
-利用这种方式，一旦改变了想法，可以轻松地使用另外一种不同的实现。只需要对程序的一个地方做出修改，即调用构造器的地方。如果觉得 LinkedListQueue 是个更好的选择，就将代码修改为：
+利用这种方式，一旦改变了想法，可以轻松地使用另外一种不同的实现。只需要对程序的一个地方做出修改，即调用构造器的地方。如果觉得 LinkedListQueue 是个更好的选择，就将代码修改为：
 ```java
 Queue<Customer> expressLane = new LinkedListQueue<>();
 expressLane.add(new Customer("Harry"));
 ```
 
-循环数组要比链表更高效。 循环数组是一个有界集合，即容量有限。如果程序中要收集的对象数量没有上限，就最好使用链表来实现。
+循环数组要比链表更高效。 循环数组是一个有界集合，即容量有限。如果程序中要收集的对象数量没有上限，就最好使用链表来实现。
 
-在研究 API 文档时，会发现另外一组名字以 Abstract 开头的类，例如，AbstractQueue。这些类是为类库实现者而设计的。如果想要实现自己的队列类，会发现扩展 AbstractQueue 类要比实现 Queue 接口中的所有方法轻松得多。
+在研究 API 文档时，会发现另外一组名字以 Abstract 开头的类，例如，AbstractQueue。这些类是为类库实现者而设计的。如果想要实现自己的队列类，会发现扩展 AbstractQueue 类要比实现 Queue 接口中的所有方法轻松得多。
 
 ## 2. Collection 接口
 在 Java 类库中，集合类的基本接口是 Collection 接口。这个接口有两个基本方法：
@@ -78,7 +78,7 @@ public interface Collection<E>
 集合中不允许有重复的对象。  
 interator 方法用于返回一个实现 Iterator 接口的对象。可以使用这个迭代器对象以此方法结合中的元素。
 
-## 3. 迭代器
+## 3. 迭代器
 Iterator 接口包含 4 个方法：
 ```java
 public interface Iterator<E> {
@@ -99,14 +99,14 @@ while (iter.hasNext())
     // do somethime with element
 }
 ```
-用 “for each” 操作：
+用 “for each” 操作：
 ```java
 for (String element : c)
 {
     // do something with element
 }
 ```
-编译器简单地将 “for each” 循环翻译成带有迭代器的循环。  
+编译器简单地将 “for each” 循环翻译成带有迭代器的循环。  
 “for each” 循环可以与任何实现了 Iterator 接口的对象一起工作，这个接口只包含一个抽象方法：
 ```java
 public interface Iterator<E>
@@ -119,10 +119,10 @@ Collection 接口扩展了 Iterator 接口。因此，对于标准类库中的�
 
 在 Java SE 8 中，甚至不用写循环。可以调用 forEachRemaining 方法并提供一个lambda 表达式。将对迭代器的每一个元素调用这个 lambda 表达式，直到再没有元素为止。  
 `iterator.forEachRemaining(element -> do something with element);`  
-元素被访问的顺序取决于集合类型。如果对 ArrayList 进行迭代，迭代器将从索引 0 开始，每迭代一次，索引值加 1.然而，如果访问 HashSet 中的元素，每个元素将会按照某种随机的次序出现。虽然可以确定在迭代过程中能够遍历到集合中的所有元素，但却无法预知元素被访问的次序。这对于计算总和和或统计符合某个条件的元素个数这类与顺序无关的操作来说，并不是什么问题。
+元素被访问的顺序取决于集合类型。如果对 ArrayList 进行迭代，迭代器将从索引 0 开始，每迭代一次，索引值加 1.然而，如果访问 HashSet 中的元素，每个元素将会按照某种随机的次序出现。虽然可以确定在迭代过程中能够遍历到集合中的所有元素，但却无法预知元素被访问的次序。这对于计算总和和或统计符合某个条件的元素个数这类与顺序无关的操作来说，并不是什么问题。
 
 ***
-**注释**：Iterator 接口的 next 和 hasNext 方法与 Enumeration 接口的 nextElement 和 hasMoreElement 方法的作用一样。Java 集合类库的设计者可以选择使用 Enumeration 接口。但是，它们不喜欢这个接口累赘的方法名，于是引入了具有 较短方法名的新接口。
+**注释**：Iterator 接口的 next 和 hasNext 方法与 Enumeration 接口的 nextElement 和 hasMoreElement 方法的作用一样。Java 集合类库的设计者可以选择使用 Enumeration 接口。但是，它们不喜欢这个接口累赘的方法名，于是引入了具有 较短方法名的新接口。
 ***
 
 Java 集合类库中的迭代器与其他类库中的迭代器在概念上有着重要的区别。在传统的集合类库中，迭代器是根据数组索引建模的。如果给定这样一个迭代器，就可以查看指定位置上的元素，就像知道数组索引 i 就可以査看数组元素 a[i] —样。不需要查找元素，就可以将迭代器向前移动一个位置。这与不需要执行査找操作就可以通过 i++ 将数组索引向前移动一样。但是，Java 迭代器并不是这样操作的。查找操作与位置变更是紧密相连的。查找一个元素的唯一方法是调用 next，而在执行查找操作的同时，迭代器的位置随之向前移动。  
@@ -189,7 +189,7 @@ iterator 方法，而 contains 方法已由 AbstractCollection 超类提供了�
 #### `java.util.Collection<E>` 1.2
 * Iterator<E> iterator()  
     >返回一个用于访问集合中每个元素的迭代器。
-* int size()  
+* int size()  
     >返回当前存储在集合中的元素个数。
 * boolean isEmpty()
     >如果集合中没有元素，返回 true
@@ -202,10 +202,10 @@ iterator 方法，而 contains 方法已由 AbstractCollection 超类提供了�
 * boolean addAll(Collection<? extends E> other)
     >将 other 结合中的所有元素添加到这个集合。如果由于这个调用改变了集合，返回 true
 * boolean remove(Object obj)
-    >从这个集合中删除等于 obj 的对象。如果有匹配的对象被删除，返回 true
+    >从这个集合中删除等于 obj 的对象。如果有匹配的对象被删除，返回 true
 * boolean removeAll(Collection<?> other)
     >从这个集合中删除 other 集合中存在的所有元素。如果由于这个调用改变了集合，返回 true
-* default boolean removeIf(Predicate<? super E> filter) 8
+* default boolean removeIf(Predicate<? super E> filter) 8
     >从这个集合删除 filter 返回 true 的所有元素。如果由于这个调用改变了集合，则返回 true
 * void clear()
     >从这个集合中删除所有的元素
@@ -219,7 +219,7 @@ iterator 方法，而 contains 方法已由 AbstractCollection 超类提供了�
 * boolean hasNect()
     >如果存在可方法的元素，返回 true
 * E next()
-    >返回将要访问的下一个对象。如果已经到达了集合的尾部，将抛出一个 NoSuchElementException
+    >返回将要访问的下一个对象。如果已经到达了集合的尾部，将抛出一个 NoSuchElementException
 * void remove()
     >删除上次访问的对象。这个方法必须紧跟在访问一个元素之后执行。如果上次访问之后，集合已经发生了变化，这个方法将抛出一个 IllegalStateException
 
@@ -227,8 +227,8 @@ iterator 方法，而 contains 方法已由 AbstractCollection 超类提供了�
 Java 集合框架为不同类型的集合定义了大量接口。
 ![](../.images/9-4.png)
 集合有两个基本接口： Collection 和 Map。  
-List 是一个有序集合（ ordered collection ）。元素会增加到容器中的特定位置。可以采用两种方式访问元素：使用迭代器访问，或者使用一个整数索引来访问。后一种方法称为随机访问（ random access )，因为这样可以按任意顺序访问元素。与之不同，使用迭代器访问时，必须顺序地访问元素。  
-List  接口定义了多个用于随机访问的方法：
+List 是一个有序集合（ ordered collection ）。元素会增加到容器中的特定位置。可以采用两种方式访问元素：使用迭代器访问，或者使用一个整数索引来访问。后一种方法称为随机访问（ random access )，因为这样可以按任意顺序访问元素。与之不同，使用迭代器访问时，必须顺序地访问元素。  
+List  接口定义了多个用于随机访问的方法：
 ```java
 void add(int index, E element)
 void remove(int index)
@@ -241,7 +241,7 @@ Listlterator 接口是 Iterator 的一个子接口。它定义了一个方法用
 坦率地讲，集合框架的这个方面设计得很不好。实际中有两种有序集合，其性能开销有很大差异。由数组支持的有序集合可以快速地随机访问，因此适合使用 List 方法并提供一个整数索引来访问。与之不同，链表尽管也是有序的，但是随机访问很慢，所以最好使用迭代器来遍历。如果原先提供两个接口就会容易一些了。
 
 ***
-**注释**：为了避免对链表完成随机访问操作，Java SE 1.4 引入了一个标机接口 RandomAccess。这个接口不包含任何方法，不过可以用它来测试一个特定的集合是否支持高校的随机访问：
+**注释**：为了避免对链表完成随机访问操作，Java SE 1.4 引入了一个标机接口 RandomAccess。这个接口不包含任何方法，不过可以用它来测试一个特定的集合是否支持高校的随机访问：
 ```java
 if (c instanceof RandomAccess)
 {
@@ -261,4 +261,4 @@ Set 接口等同于 Collection 接口，不过其方法的行为有更严谨的�
 
 SortedSet 和 SortedMap 接口会提供用于排序的比较器对象，这两个接口定义了可以得到集合子集视图的方法。
 
-最后，Java SE 6 引人了接口 NavigableSet 和 NavigableMap，其中包含一些用于搜索和遍历有序集和映射的方法。（理想情况下，这些方法本应当直接包含在 SortedSet 和 SortedMap 接口中）。TreeSet 和 TreeMap 类实现了这些接口。
+最后，Java SE 6 引人了接口 NavigableSet 和 NavigableMap，其中包含一些用于搜索和遍历有序集和映射的方法。（理想情况下，这些方法本应当直接包含在 SortedSet 和 SortedMap 接口中）。TreeSet 和 TreeMap 类实现了这些接口。

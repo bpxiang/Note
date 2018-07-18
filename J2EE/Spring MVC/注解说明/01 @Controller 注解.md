@@ -1,5 +1,5 @@
 # @Controller  注解
->time: 2018-07-02 22:10:39
+>time: 2018-07-02 22:10:39
 
 `org.springframework.stereotype.Controller` 注解类型用于指示 Spring 类的实例是一个控制器，使用 @Controller 注解的类不需要继承特定的接口，相对之前的版本实现 Controller 接口变得更加简单。而且 Controller 接口的实现类只能处理一个单一请求动作，而 @Controller 注解的控制器可以支持同时处理多个请求动作，更加灵活。
 

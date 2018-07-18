@@ -1,7 +1,7 @@
 # Mavan 的 pom.xml
 >time: 2018-05-03 10:21:40  
 
-Maven 是基于项目对象模型的概念运作的，所以 Maven 的项目都有衣蛾 `pom.xml` 用来管理项目的依赖以及项目的编译等功能。
+Maven 是基于项目对象模型的概念运作的，所以 Maven 的项目都有衣蛾 `pom.xml` 用来管理项目的依赖以及项目的编译等功能。
 
 ## 1. dependencies 元素
 `<dependencies></dependencies>`，此元素包含多个项目依赖需要使用得`<dependency></dependency>`。
@@ -18,7 +18,7 @@ Maven 是基于项目对象模型的概念运作的，所以 Maven 的项目都
 </dependency>
 ```
 
-## 3. 变量定义
+## 3. 变量定义
 变量定义：`<properties></properties>` 可定义变量在 `dependency` 中引用。
 
 ```xml
