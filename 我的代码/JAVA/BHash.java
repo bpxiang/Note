@@ -9,8 +9,8 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class BHash {
-	/**
-     * ¼ÆËã×Ö·û´® md5 Öµ
+    /**
+     * è®¡ç®—å­—ç¬¦ä¸² md5 å€¼
      * @param str
      * @return
      * @throws NoSuchAlgorithmException
@@ -18,13 +18,13 @@ public class BHash {
     public static String md5(String str) {
         String hashVal = "getMd5ValueError";
         try {
-        	hashVal = BHash.hash(str, "MD5");
+            hashVal = BHash.hash(str, "MD5");
         } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
         }
         return hashVal;
     }
     /**
-     * ¼ÆËãÎÄ¼þ md5 Öµ
+     * è®¡ç®—æ–‡ä»¶ md5 å€¼
      * @param str
      * @return
      * @throws NoSuchAlgorithmException
@@ -32,14 +32,14 @@ public class BHash {
     public static String md5(File file) {
         String hashVal = "getMd5ValueError";
         try {
-        	hashVal = BHash.hash(file, "MD5");
+            hashVal = BHash.hash(file, "MD5");
         } catch (NoSuchAlgorithmException | IOException e) {
         }
         return hashVal;
     }
 
-	/**
-     * ¼ÆËã×Ö·û´®¹þÏ£Öµ
+    /**
+     * è®¡ç®—å­—ç¬¦ä¸²å“ˆå¸Œå€¼
      * @param str
      * @param hashType
      * @return
@@ -56,48 +56,48 @@ public class BHash {
     
     
 
-	/**
-     * ¼ÆÎÄ¼þ·û´®¹þÏ£Öµ
+    /**
+     * è®¡æ–‡ä»¶ç¬¦ä¸²å“ˆå¸Œå€¼
      * @param file
      * @param hashType
      * @return
-	 * @throws NoSuchAlgorithmException 
-	 * @throws IOException 
-	 * @throws Exception 
+     * @throws NoSuchAlgorithmException 
+     * @throws IOException 
+     * @throws Exception 
      */
     private static String hash(File file, String hashType) throws NoSuchAlgorithmException, IOException {
-    	
-    	if(file.exists() && file.isFile()) {
-    		FileInputStream in = new FileInputStream(file);
+        
+        if(file.exists() && file.isFile()) {
+            FileInputStream in = new FileInputStream(file);
 
-    		MessageDigest md = MessageDigest.getInstance(hashType);
-    		
-    		long fileLength = file.length();
-    		long start = 0;
-    		int max = Integer.MAX_VALUE;
-    		
-    		do {
-    			long length;
-    			if(start + max > fileLength) {
-    				length = fileLength - start;
-    			}else {
-    				length = max;
-    			}
-    			
-    			MappedByteBuffer byteBuffer = in.getChannel().map(FileChannel.MapMode.READ_ONLY, start, length);
-    			md.update(byteBuffer);
-    			start += length;
-    		}while(start < fileLength);
+            MessageDigest md = MessageDigest.getInstance(hashType);
+            
+            long fileLength = file.length();
+            long start = 0;
+            int max = Integer.MAX_VALUE;
+            
+            do {
+                long length;
+                if(start + max > fileLength) {
+                    length = fileLength - start;
+                }else {
+                    length = max;
+                }
+                
+                MappedByteBuffer byteBuffer = in.getChannel().map(FileChannel.MapMode.READ_ONLY, start, length);
+                md.update(byteBuffer);
+                start += length;
+            }while(start < fileLength);
 
-    		return createHashCode(md.digest());
-    	}else {
-    		throw new FileNotFoundException("ÎÄ¼þ²»´æÔÚ£¡");
-    	}
+            return createHashCode(md.digest());
+        }else {
+            throw new FileNotFoundException("æ–‡ä»¶ä¸å­˜åœ¨ï¼");
+        }
     }
     
     private static String createHashCode(byte[] digest) {
-    	//return new BigInteger(digest).toString(16);  // Éú³É md5 Öµ
-    	//return new BigInteger(1, digest).toString(16);  // Éú³É md5 Öµ
+        //return new BigInteger(digest).toString(16);  // ç”Ÿæˆ md5 å€¼
+        //return new BigInteger(1, digest).toString(16);  // ç”Ÿæˆ md5 å€¼
         StringBuffer md5StrBuff = new StringBuffer();    
     
         for (int i = 0; i < digest.length; i++)    
