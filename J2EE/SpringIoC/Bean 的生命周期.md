@@ -1,13 +1,34 @@
 # Bean 的生命周期
 >time: 2018-7-27 16:06:40
 
+#### Bean 的声明周期
+| 方法 | 说明 |
+|---|---|
+| 开始 | |
+| 初始化 | |
+| 依赖注入 | |
+| setBeanName 方法 | 接口 BeanNameAware |
+| setBeanFactory 方法 | 接口 BeanFactoryAware |
+| setApplicationContext 方法 | 接口 ApplicationContextAware，需要容器实现 ApplicationContext 接口才会被调用 |
+| postProcessBeforeInitialization 方法 | BeanPostProcessor 的预初始化方法，注意：它是针对全部 Bean 而言 |
+| afterPropertiesSet 方法 | 接口 InitializingBean |
+| 自定义初始化方法 | 除了 XML 外，也可以用注解 @PostConstruct 标注方法声明 |
+| postProcessAfterInitialization 方法 | BeanPostProcessor 的后初始化方法，注意：它是针对全部 Bean 而言的 |
+| 生存期 | |
+| destroy 方法 | 接口 DisposableBean |
+| 自定义销毁方法 | 除了 XML 之外，也可以用注解 @PreDestroy 标注方法声明 |
+| 结束 | |
+
 #### 生命周期的步骤：
 1. 如果 Bean 实现了接口 BeanNameAware 的 setBeanName 方法，那么它就会调用这个方法。
 2. 如果 Bean 实现了接口 BeanFactoryAware 的 setBeanFactory 方法，那么它就会调用这个方法。
-3. 如果 Bean 实现了 ApplicationContextAwar 的 setApplicationContext 方法，切 Spring IoC 容器也必须是一个 ApplicationContext 接口实现的类，那么才会调用这个方法，否则是不调用的。
-4. 如果 Bean 实现了接口 BeanPostProcessor 的 postProcessBefortInitialization 方法，那么它就调用这个方法。
+3. 如果 Bean 实现了接口 ApplicationContextAware 的 setApplicationContext 方法，且 Spring IoC 容器也必须是一个 ApplicationContext 接口的实现类，那么才会调用这个方法，否则是不调用的。
+4. 如果 Bean 实现了接口 BeanPostProcessor 的 postProcessBeforeInitialization 方法，那么它就调用这个方法。
 5. 如果 Bean 实现了接口 BeanFactoryPostProcessor 的 afterPropertiesSet 方法，那么它就会调用这个方法。
-6. 如果 Bean 实现了接口 BeanPostProcessor 的 postProcessAterInitialization 方法，完成了这些调用，这个时候 Bean 就完成了初始化，那么 Bean 就生存在 Spring Ioc 的容器中了，使用者就可以从中获取 Bean 的服务了。
+6. 如果 Bean 自定义了初始化方法，它就会调用已定义的初始化方法。
+7. 如果 Bean 实现了接口 BeanPostProcessor 的 postProcessAfterInitialization 方法，完成了这些调用，这个时候 Bean 就完成了初始化，那么 Bean 就生存在 Spring Ioc 的容器中了，使用者就可以从中获取 Bean 的服务了。
+
+
 
 #### Bean 销毁的步骤
 1. 如果 Bean 实现了接口 DisposableBean 的 destroy 方法，那么就会调用它。
@@ -94,7 +115,7 @@ public class JuiceMaker implements BeanNameAware, BeanFactoryAware,
         System.out.println(String.format("【%s】执行自定义销毁方法", this.getClass().getSimpleName()));
     }
     
-    public String makJuice() {
+    public String makeJuice() {
         String juice = "这是一杯由" + beverageShop + "饮品店，提供的"
                 + source.getSize() + source.getSugar() + source.getFruit(); 
         return juice;
@@ -163,7 +184,7 @@ public class Test {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("spring-cfg.xml");
         JuiceMaker maker = (JuiceMaker)ctx.getBean("juiceMaker");
-        System.out.println(maker.makJuice());
+        System.out.println(maker.makeJuice());
         ctx.close();
     }
 }
