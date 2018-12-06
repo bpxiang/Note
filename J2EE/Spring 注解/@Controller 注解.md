@@ -1,6 +1,8 @@
 # @Controller  注解
 >time: 2018-07-02 22:10:39
 
+声明此类是一个 MVC 类，通常与 @RequestMapping 一起使用。
+
 `org.springframework.stereotype.Controller` 注解类型用于指示 Spring 类的实例是一个控制器，使用 @Controller 注解的类不需要继承特定的接口，相对之前的版本实现 Controller 接口变得更加简单。而且 Controller 接口的实现类只能处理一个单一请求动作，而 @Controller 注解的控制器可以支持同时处理多个请求动作，更加灵活。
 
 @Controller 用于标记一个类，使用它标记的类就是一个 SpringMVC Controller 对象，即一个控制器类。Spring 使用扫描机制查找应用程序中所有基于注解的控制器类。分发处理器会扫描使用了该注解的类的方法，并检测该方法是否使用了 @RequestMapping 注解，而使用 @RequestMapping 注解的方法才是真正处理请求的处理器。为了保证 Spring 控制器，需要完成两件事：
