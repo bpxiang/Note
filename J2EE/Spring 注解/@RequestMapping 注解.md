@@ -16,7 +16,7 @@
 | name | String | 否 | 给映射地址指定一个别名 |
 | method | RequestMethod | 否 | 映射指定请求的方法类型，包括 GET、POST、HEAD、OPTION、PUT、PATCH、DELETE、TRACE |
 | consumes | String[] | 否 | 指定处理请求的提交内容类型（Content-Type），例如，application/json、text/html 等。 |
-| produces | String[] | 否 | 指定返回的内容类型，返回的内容类型必须是 request 请求头（Accept）中所包含的类型 |
+| produces | String[] | 否 | 指定返回的内容类型，返回的内容类型必须是 request 请求头（Accept）中所包含的类型（如 produces="application/json"） |
 | params | String[] | 否 | 指定 request 中必须包含某些参数值时，才让该方法处理 |
 | heads | String[] | 否 | 指定 request 中必须包含某些指定的 header 值，才让该方法处理 |
 | Path | String[] | 否 | 在 Servlet 环境中只有 :uri 路径映射（例如“/myPhah.do”）。也支持如 ant 的基于路径模式（例如“/myPath/*,”）。在方法层面上，支持相对路径（例如“edit.do”） |
@@ -82,3 +82,27 @@
             headers="Referer=http://www.bpx.com/")
     ```
     该方法仅处理 Request 的 Header 中包含了指定 “Referer” 请求头和对应值为“http://www.bpx.com/”的请求。
+
+
+## URL 路径匹配
+属性 value 用于匹配一个 URL 映射，value 支持简单的表达式来匹配：
+```java
+@RequestMapping(value="/get/{id}.json")
+public @ResponseBody User getById(@PathVariable("id") Long id) {
+    return userService.getUserById(id);
+}
+```
+
+## Ant 路径表达式
+Ant 用符号 “*” 来表示匹配任意字符，用 “**” 来表示统配任意路径，用 “?” 来匹配单个字符
+* `/user/*.html`， 匹配 `/user/1.html`、`/user/2.html` 等
+* `/**/1.html`，匹配 `/1.html`，也匹配 `/user/1.html`，还匹配 `/user/add/1.html`
+* `/user/?.html`，匹配 `/user/1.html`，但不匹配 `/user/11.html`
+
+## 简化后的 @RequestMapping
+* @GetMapping
+* @PostMapping
+* @PutMapping
+* @DeleteMapping
+* @PatchMapping
+
